@@ -18,5 +18,10 @@
     "name": "Example Applications",
     "url": "https://github.com/OpenTOSCA/tosca-definitions-example-applications",
     "branch": "main"
+  },
+  {
+    "name": "Example Quantum Applications",
+    "url": "https://github.com/UST-QuAntiL/tosca-definitions-qc-applications",
+    "branch": "main"
   }
 ]
