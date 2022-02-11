@@ -3,7 +3,7 @@
     <ServiceTemplate name="MyTinyToDo-DockerEngine-Test_w1-wip1" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="MyTinyToDo-DockerEngine-Test_w1-wip1">
         <Tags>
             <Tag name="scalingplans" value="scaleout_dockercontainer"/>
-            <Tag name="scaleout_dockercontainer" value="MyTinyToDoDockerContainer_w1;con_HostedOn_0;FirstInstance[DockerEngine_w1]"/>
+            <Tag name="scaleout_dockercontainer" value="MyTinyToDoDockerContainer_w1_0;con_HostedOn_0;FirstInstance[DockerEngine_w1_0]"/>
         </Tags>
         <TopologyTemplate>
             <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerEngine_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine_w1" id="DockerEngine_w1_0" winery:x="798" winery:y="870">
