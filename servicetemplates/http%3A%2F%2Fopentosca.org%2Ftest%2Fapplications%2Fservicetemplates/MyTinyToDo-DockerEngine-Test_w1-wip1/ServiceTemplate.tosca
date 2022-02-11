@@ -5,14 +5,6 @@
             <Tag name="scalingplans" value="scaleout_dockercontainer"/>
             <Tag name="scaleout_dockercontainer" value="MyTinyToDoDockerContainer_w1;con_17;FirstInstance[DockerEngine_w1]"/>
         </Tags>
-        <BoundaryDefinitions>
-            <Properties>
-                <ns0:selfserviceApplicationUrl xmlns:ns0="http://www.eclipse.org/winery/model/selfservice" xmlns:yml="http://docs.oasis-open.org/tosca/ns/simple/yaml/1.3"/>
-				<PropertyMappings>
-					<PropertyMapping serviceTemplatePropertyRef="/*[local-name()='selfserviceApplicationUrl']" targetObjectRef="MyTinyToDoDockerContainer_w1" targetPropertyRef="concat('http://', MyTinyToDoDockerContainer_w1.Properties.ContainerIP, ':', MyTinyToDoDockerContainer_w1.Properties.Port)"/>
-				</PropertyMappings>
-            </Properties>
-        </BoundaryDefinitions>
         <TopologyTemplate>
             <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerEngine_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine_w1" id="DockerEngine_w1_0" winery:x="798" winery:y="870">
                 <Properties>
