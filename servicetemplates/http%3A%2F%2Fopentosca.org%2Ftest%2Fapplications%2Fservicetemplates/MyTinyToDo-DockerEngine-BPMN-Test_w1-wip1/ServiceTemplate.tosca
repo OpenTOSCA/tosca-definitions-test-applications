@@ -50,7 +50,7 @@
                     <InputParameter name="DockerEngineURL" type="String" required="yes"/>
                 </InputParameters>
                 <OutputParameters/>
-                <PlanModelReference reference="../servicetemplates/http%253A%252F%252Fopentosca.org%252Fservicetemplates/MyTinyToDo_Bare_Docker_BPMN/plans/buildPlan/plan.zip"/>
+                <PlanModelReference reference="../servicetemplates/http%253A%252F%252Fopentosca.org%252Ftest%252Fapplications%252Fservicetemplates/MyTinyToDo-DockerEngine-BPMN-Test_w1-wip1/plans/buildPlan/plan.zip"/>
             </Plan>
         </Plans>
     </ServiceTemplate>
