@@ -11,7 +11,7 @@
             </Interfaces>
         </BoundaryDefinitions>
         <TopologyTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerEngine_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine_w1" id="DockerEngine_0" winery:x="991" winery:y="773">
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerEngine_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine_w1" id="DockerEngine_w1_0" winery:x="991" winery:y="773">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <DockerEngineURL>get_input: DockerEngineURL</DockerEngineURL>
@@ -19,7 +19,7 @@
                     </Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/example/applications/nodetypes" name="MyTinyToDoDockerContainer_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:MyTinyToDoDockerContainer_w1" id="MyTinyToDoDockerContainer_0" winery:x="992" winery:y="117">
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/example/applications/nodetypes" name="MyTinyToDoDockerContainer_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:MyTinyToDoDockerContainer_w1" id="MyTinyToDoDockerContainer_w1_0" winery:x="992" winery:y="117">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <Port>get_input: ApplicationPort</Port>
@@ -36,8 +36,8 @@
                 </DeploymentArtifacts>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
-                <SourceElement ref="MyTinyToDoDockerContainer_0"/>
-                <TargetElement ref="DockerEngine_0"/>
+                <SourceElement ref="MyTinyToDoDockerContainer_w1_0"/>
+                <TargetElement ref="DockerEngine_w1_0"/>
             </RelationshipTemplate>
         </TopologyTemplate>
         <Plans>
@@ -50,7 +50,7 @@
                     <InputParameter name="DockerEngineURL" type="String" required="yes"/>
                 </InputParameters>
                 <OutputParameters/>
-                <PlanModelReference reference="../servicetemplates/http%253A%252F%252Fopentosca.org%252Ftest%252Fapplications%252Fservicetemplates/MyTinyToDo-DockerEngine-BPMN-Test_w1-wip1/plans/buildPlan/plan.zip"/>
+                <PlanModelReference reference="../servicetemplates/http%253A%252F%252Fopentosca.org%252Fservicetemplates/MyTinyToDo_Bare_Docker_BPMN/plans/buildPlan/plan.zip"/>
             </Plan>
         </Plans>
     </ServiceTemplate>
