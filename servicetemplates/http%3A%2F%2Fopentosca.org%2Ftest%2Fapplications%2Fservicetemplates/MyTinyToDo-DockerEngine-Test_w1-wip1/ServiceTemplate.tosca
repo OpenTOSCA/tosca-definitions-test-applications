@@ -11,7 +11,7 @@
                     <Properties xmlns="http://www.example.org">
                         <DockerEngineURL>get_input: DockerEngineURL</DockerEngineURL>
                         <DockerEngineCertificate/>
-						<State>Running</State>
+			<State>Running</State>
                     </Properties>
                 </Properties>
             </NodeTemplate>
