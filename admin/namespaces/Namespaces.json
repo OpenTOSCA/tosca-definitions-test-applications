@@ -15,6 +15,14 @@
     "patternCollection" : false,
     "secureCollection" : false
   },
+  "http://opentosca.org/test/applications/artifacttemplates" : {
+    "namespace" : "http://opentosca.org/test/applications/artifacttemplates",
+    "prefix" : "otateIgeneral",
+    "readableName" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
   "http://docs.oasis-open.org/tosca/ns/2011/12" : {
     "namespace" : "http://docs.oasis-open.org/tosca/ns/2011/12",
     "prefix" : "tosca",
