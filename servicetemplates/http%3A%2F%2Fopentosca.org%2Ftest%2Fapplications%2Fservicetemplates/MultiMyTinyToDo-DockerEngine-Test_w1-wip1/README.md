@@ -1,4 +1,4 @@
-# MutliMyTinyToDo-DockerEngine-Test [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# MultiMyTinyToDo-DockerEngine-Test [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 > Installs the PHP Application MyTinyToDo three times as a Docker Container on a locally installed DockerEngine.
 
