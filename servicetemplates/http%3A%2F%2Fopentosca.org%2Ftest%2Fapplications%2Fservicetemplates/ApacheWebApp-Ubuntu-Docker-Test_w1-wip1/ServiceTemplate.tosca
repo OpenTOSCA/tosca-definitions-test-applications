@@ -33,7 +33,7 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="ApacheApp_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral:ApacheApp_w1-wip1" id="ApacheApp_w1-wip1_0" winery:x="1092" winery:y="95">
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="ApacheApp_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:ApacheApp_w1" id="ApacheApp_w1_0" winery:x="1092" winery:y="95">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <URL/>
@@ -52,7 +52,7 @@
                 <TargetElement ref="DockerContainer_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
-                <SourceElement ref="ApacheApp_w1-wip1_0"/>
+                <SourceElement ref="ApacheApp_w1_0"/>
                 <TargetElement ref="ApacheWebServer_w1_0"/>
             </RelationshipTemplate>
         </TopologyTemplate>
