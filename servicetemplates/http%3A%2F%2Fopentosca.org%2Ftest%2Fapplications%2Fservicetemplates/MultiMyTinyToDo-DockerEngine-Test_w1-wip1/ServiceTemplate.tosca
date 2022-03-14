@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="otsteIgeneral-MultiMyTinyToDo-DockerEngine-Test_w1-wip1">
-    <ServiceTemplate name="MutliMyTinyToDo-DockerEngine-Test_w1-wip1" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="MultiMyTinyToDo-DockerEngine-Test_w1-wip1">
+    <ServiceTemplate name="MultiMyTinyToDo-DockerEngine-Test_w1-wip1" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="MultiMyTinyToDo-DockerEngine-Test_w1-wip1">
         <Tags>
             <Tag name="scalingplans" value="scaleout_dockercontainer"/>
             <Tag name="scaleout_dockercontainer" value="MyTinyToDoDockerContainer_w1_0;con_HostedOn_0;FirstInstance[DockerEngine_w1_0]"/>
