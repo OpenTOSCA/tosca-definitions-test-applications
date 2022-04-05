@@ -2,9 +2,9 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="otsteIgeneral-PHPApplicationStackDocker_w1-wip1">
     <ServiceTemplate name="PHPApplicationStackDocker_w1-wip1" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="PHPApplicationStackDocker_w1-wip1">
         <TopologyTemplate>
-            <NodeTemplate xmlns:ntyIgeneral1="http://www.example.org/tosca/nodetypes" name="Apache2.4_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:Apache2.4_w1-wip1" id="Apache2.4_w1-wip1_0" winery:x="745" winery:y="232"/>
-            <NodeTemplate xmlns:ntyIgeneral1="http://www.example.org/tosca/nodetypes" name="PHP7_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:PHP7_w1-wip1" id="PHP7_w1-wip1_0" winery:x="304" winery:y="220"/>
-            <NodeTemplate xmlns:ntyIgeneral1="http://www.example.org/tosca/nodetypes" name="PHP7Application_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:PHP7Application_w1-wip1" id="PHP7Application_w1-wip1_0" winery:x="747" winery:y="69"/>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="Apache2.4_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral:Apache2.4_w1-wip1" id="Apache2.4_w1-wip1_0" winery:x="745" winery:y="232"/>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="PHP7_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral:PHP7_w1-wip1" id="PHP7_w1-wip1_0" winery:x="304" winery:y="220"/>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="PHP7Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral:PHP7Application_w1-wip1" id="PHP7Application_w1-wip1_0" winery:x="747" winery:y="69"/>
             <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerContainer_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerContainer_w1" id="DockerContainer_w1_0" winery:x="461" winery:y="379">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
@@ -31,7 +31,7 @@
                 <SourceElement ref="PHP7Application_w1-wip1_0"/>
                 <TargetElement ref="Apache2.4_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:ntyIgeneral="http://www.example.org/tosca/relationshiptypes" name="ApacheConnectsToPHP7_w1-wip1" type="ntyIgeneral:ApacheConnectsToPHP7_w1-wip1" id="con_ApacheConnectsToPHP7_w1-wip1_0">
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="ApacheConnectsToPHP7_w1-wip1" type="otntyIgeneral:ApacheConnectsToPHP7_w1-wip1" id="con_ApacheConnectsToPHP7_w1-wip1_0">
                 <SourceElement ref="Apache2.4_w1-wip1_0"/>
                 <TargetElement ref="PHP7_w1-wip1_0"/>
             </RelationshipTemplate>
