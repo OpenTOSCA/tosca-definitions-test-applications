@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions targetNamespace="http://www.example.org/tosca/servicetemplates" id="steIgeneral-PHPApplicationStackDocker_w1-wip1" xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:yml="http://docs.oasis-open.org/tosca/ns/simple/yaml/1.3" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org">
+    <ServiceTemplate name="PHPApplicationStackDocker_w1-wip1" targetNamespace="http://www.example.org/tosca/servicetemplates" id="PHPApplicationStackDocker_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate name="Apache2.4_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral:Apache2.4_w1-wip1" id="Apache2.4_w1-wip1_0" winery:x="745" winery:y="232" xmlns:ntyIgeneral="http://www.example.org/tosca/nodetypes"/>
+            <NodeTemplate name="PHP7_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral:PHP7_w1-wip1" id="PHP7_w1-wip1_0" winery:x="304" winery:y="220" xmlns:ntyIgeneral="http://www.example.org/tosca/nodetypes"/>
+            <NodeTemplate name="PHP7Application_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral:PHP7Application_w1-wip1" id="PHP7Application_w1-wip1_0" winery:x="747" winery:y="69" xmlns:ntyIgeneral="http://www.example.org/tosca/nodetypes"/>
+            <NodeTemplate name="DockerContainer_w1" minInstances="1" maxInstances="1" type="nodeTypes:DockerContainer_w1" id="DockerContainer_w1_0" winery:x="461" winery:y="379" xmlns:nodeTypes="http://opentosca.org/nodetypes">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org">
+                        <ex:Port>9991</ex:Port>
+                        <ex:ContainerPort>80</ex:ContainerPort>
+                        <ex:ContainerID/>
+                        <ex:ContainerIP/>
+                        <ex:ImageID>ubuntu:20.04</ex:ImageID>
+                        <ex:ContainerMountPath/>
+                        <ex:HostMountFiles/>
+                        <ex:PrivilegedMode/>
+                    </ex:Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate name="DockerEngine_w1" minInstances="1" maxInstances="1" type="nodeTypes:DockerEngine_w1" id="DockerEngine_w1_0" winery:x="454" winery:y="513" xmlns:nodeTypes="http://opentosca.org/nodetypes">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org">
+                        <ex:DockerEngineURL>get_input: DockerEngineURL</ex:DockerEngineURL>
+                        <ex:DockerEngineCertificate/>
+                    </ex:Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0" xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes">
+                <SourceElement ref="PHP7Application_w1-wip1_0"/>
+                <TargetElement ref="Apache2.4_w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate name="ApacheConnectsToPHP7_w1-wip1" type="ntyIgeneral:ApacheConnectsToPHP7_w1-wip1" id="con_ApacheConnectsToPHP7_w1-wip1_0" xmlns:ntyIgeneral="http://www.example.org/tosca/relationshiptypes">
+                <SourceElement ref="Apache2.4_w1-wip1_0"/>
+                <TargetElement ref="PHP7_w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1" xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes">
+                <SourceElement ref="PHP7_w1-wip1_0"/>
+                <TargetElement ref="DockerContainer_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2" xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes">
+                <SourceElement ref="DockerContainer_w1_0"/>
+                <TargetElement ref="DockerEngine_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3" xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes">
+                <SourceElement ref="Apache2.4_w1-wip1_0"/>
+                <TargetElement ref="DockerContainer_w1_0"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
