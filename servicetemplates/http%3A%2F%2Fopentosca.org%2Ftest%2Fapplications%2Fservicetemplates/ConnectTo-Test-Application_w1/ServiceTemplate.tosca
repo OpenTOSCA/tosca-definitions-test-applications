@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="otsteIgeneral-ConnectTo-Test-Application_w1-wip1">
-    <ServiceTemplate name="ConnectTo-Test-Application_w1-wip1" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="ConnectTo-Test-Application_w1-wip1">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="otsteIgeneral-ConnectTo-Test-Application_w1">
+    <ServiceTemplate name="ConnectTo-Test-Application_w1" targetNamespace="http://opentosca.org/test/applications/servicetemplates" id="ConnectTo-Test-Application_w1">
         <TopologyTemplate>
             <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="DockerEngine_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:DockerEngine_w1" id="DockerEngine_w1_0" winery:x="1158" winery:y="875">
                 <Properties>
@@ -32,9 +32,9 @@
                     </ex:Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/test/applications/nodetypes" name="App-B_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral:App-B_w1-wip1" id="App-B_w1-wip1_0" winery:x="1165" winery:y="177"/>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/test/applications/nodetypes" name="App-C_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral:App-C_w1-wip1" id="App-C_w1-wip1_0" winery:x="1649" winery:y="183"/>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/test/applications/nodetypes" name="App-A_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral:App-A_w1-wip1" id="App-A_w1-wip1_0" winery:x="627" winery:y="203">
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/test/applications/nodetypes" name="App-B_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:App-B_w1" id="App-B_w1_0" winery:x="1165" winery:y="177"/>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/test/applications/nodetypes" name="App-C_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:App-C_w1" id="App-C_w1_0" winery:x="1649" winery:y="183"/>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/test/applications/nodetypes" name="App-A_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:App-A_w1" id="App-A_w1_0" winery:x="627" winery:y="203">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
                         <AppName>test</AppName>
@@ -52,15 +52,15 @@
                         <ChannelType/>
                     </pdIToscaBaseTypes:properties>
                 </Properties>
-                <SourceElement ref="App-B_w1-wip1_0"/>
-                <TargetElement ref="App-C_w1-wip1_0"/>
+                <SourceElement ref="App-B_w1_0"/>
+                <TargetElement ref="App-C_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
-                <SourceElement ref="App-B_w1-wip1_0"/>
+                <SourceElement ref="App-B_w1_0"/>
                 <TargetElement ref="NGINX_latest-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
-                <SourceElement ref="App-C_w1-wip1_0"/>
+                <SourceElement ref="App-C_w1_0"/>
                 <TargetElement ref="NGINX_latest-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_4">
@@ -68,7 +68,7 @@
                 <TargetElement ref="DockerContainer_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
-                <SourceElement ref="App-A_w1-wip1_0"/>
+                <SourceElement ref="App-A_w1_0"/>
                 <TargetElement ref="NGINX_latest-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="ConnectsTo" type="ToscaBaseTypes:ConnectsTo" id="con_ConnectsTo_0">
@@ -77,8 +77,8 @@
                         <ChannelType/>
                     </pdIToscaBaseTypes:properties>
                 </Properties>
-                <SourceElement ref="App-A_w1-wip1_0"/>
-                <TargetElement ref="App-B_w1-wip1_0"/>
+                <SourceElement ref="App-A_w1_0"/>
+                <TargetElement ref="App-B_w1_0"/>
             </RelationshipTemplate>
         </TopologyTemplate>
     </ServiceTemplate>
