@@ -13,15 +13,15 @@
         <TopologyTemplate>
             <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerEngine_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine_w1" id="DockerEngine_w1_0" winery:x="991" winery:y="773">
                 <Properties>
-                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
+                    <Properties xmlns="http://www.example.org">
                         <DockerEngineURL>get_input: DockerEngineURL</DockerEngineURL>
                         <DockerEngineCertificate/>
-                    </ex:Properties>
+                    </Properties>
                 </Properties>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/example/applications/nodetypes" name="MyTinyToDoDockerContainer_w1" minInstances="1" maxInstances="1" type="otntyIgeneral:MyTinyToDoDockerContainer_w1" id="MyTinyToDoDockerContainer_w1_0" winery:x="992" winery:y="117">
                 <Properties>
-                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
+                    <Properties xmlns="http://www.example.org">
                         <Port>get_input: ApplicationPort</Port>
                         <ContainerPort>80</ContainerPort>
                         <ContainerID/>
@@ -29,10 +29,10 @@
                         <ImageID/>
                         <ContainerMountPath/>
                         <HostMountFiles/>
-                    </ex:Properties>
+                    </Properties>
                 </Properties>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:otateIgeneral1="http://opentosca.org/example/applications/artifacttemplates" name="MyTinyToDo_DA" artifactType="otatyIgeneral:DockerContainerArtifact" artifactRef="otateIgeneral1:MyTinyToDo_DA-w1"/>
+                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:otateIgeneral="http://opentosca.org/example/applications/artifacttemplates" name="MyTinyToDo_DA" artifactType="otatyIgeneral:DockerContainerArtifact" artifactRef="otateIgeneral:MyTinyToDo_DA-w1"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
