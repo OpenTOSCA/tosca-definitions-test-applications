@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/test/applications/nodetypeimplementations" id="otntyiIgeneral-App-A-Implementation_w1">
+    <NodeTypeImplementation xmlns:otntyIgeneral="http://opentosca.org/test/applications/nodetypes" targetNamespace="http://opentosca.org/test/applications/nodetypeimplementations" name="App-A-Implementation_w1" abstract="no" final="no" nodeType="otntyIgeneral:App-A_w1">
+        <DerivedFrom xmlns:otntyiIgeneral="http://opentosca.org/nodetypeimplementations" nodeTypeImplementationRef="otntyiIgeneral:NGINX-Application-Implementation_w1"/>
+        <ImplementationArtifacts>
+            <ImplementationArtifact xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" xmlns:otateIgeneral="http://opentosca.org/test/applications/artifacttemplates" name="App-A-connectTo" interfaceName="http://opentosca.org/interfaces/connections/source/App-B" operationName="connectTo" artifactType="ToscaBaseTypes:ScriptArtifact" artifactRef="otateIgeneral:App-A_connectTo-w1"/>
+            <ImplementationArtifact xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" xmlns:otateIgeneral1="http://opentosca.org/artifacttemplates" name="App-A-configure" interfaceName="http://opentosca.org/interfaces/lifecycle" operationName="configure" artifactType="ToscaBaseTypes:ScriptArtifact" artifactRef="otateIgeneral1:NGINX-Application_Configure-w1"/>
+            <ImplementationArtifact xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" xmlns:otateIgeneral1="http://opentosca.org/artifacttemplates" name="App-A-install" interfaceName="http://opentosca.org/interfaces/lifecycle" operationName="install" artifactType="ToscaBaseTypes:ScriptArtifact" artifactRef="otateIgeneral1:NGINX-Application_Install-w1"/>
+        </ImplementationArtifacts>
+    </NodeTypeImplementation>
+</Definitions>
